@@ -1,0 +1,36 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-grey-dark;
+  // padding: 2rem;
+}
+
+.heading-primary {
+  color: $color-white;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    &-span {
+      color: $color-orange;
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    animation: moveInRight 1s ease-out;
+  }
+}
