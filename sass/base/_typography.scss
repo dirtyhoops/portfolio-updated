@@ -34,3 +34,18 @@ body {
     animation: moveInRight 1s ease-out;
   }
 }
+
+.heading-secondary {
+  font-size: 3.5rem;
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  color: $color-black;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+}

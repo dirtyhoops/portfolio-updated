@@ -24,7 +24,9 @@
     />
 
     <!-- jquery and js -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/jquery/navshrink.js"></script>
 
     <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -33,28 +35,28 @@
     <title>Daryll Osis's Portfolio</title>
   </head>
   <body>
-    <!-- <nav>
-      <div class="menu-icon">
+    <nav class="nav">
+      <div class="nav__menuicon">
         <i class="fa fa-bars fa-2x"></i>
       </div>
-      <div class="logo" id="link5">
+      <div class="nav__logo" id="link5">
         DO
       </div>
-      <div class="menu">
+      <div class="nav__menu">
         <ul>
-          <li><a href="#header" class="coollink" id="link0">Home</a></li>
-          <li><a href="#aboutdiv" class="coollink" id="link1">About</a></li>
-          <li><a href="#skillsdiv" class="coollink" id="link4">Skills</a></li>
+          <li><a class="navlinks" id="link-home">Home</a></li>
+          <li><a class="navlinks" id="link-about">About</a></li>
+          <li><a class="navlinks" id="link-skills">Skills</a></li>
           <li>
-            <a href="#educationdiv" class="coollink" id="link2">Education</a>
+            <a class="navlinks" id="link3">Education</a>
           </li>
           <li>
-            <a href="#projectdiv" class="coollink" id="link3">Projects</a>
+            <a class="navlinks" id="link3">Projects</a>
           </li>
-          <li><a href="#contactdiv" class="coollink" id="link6">Contact</a></li>
+          <li><a class="navlinks" id="link6">Contact</a></li>
         </ul>
       </div>
-    </nav> -->
+    </nav>
     <header class="header" id="header">
       <div class="header__text-box">
         <h1 class="heading-primary">
@@ -65,14 +67,129 @@
           <span class="heading-primary--sub">I'm a Full Stack Developer</span>
         </h1>
 
-        <a href="#" class="btn btn--white btn--animated">Check my projects</a>
+        <a href="#" id="link7" class="btn btn--white btn--animated"
+          >Check my projects</a
+        >
       </div>
     </header>
 
     <main>
-      <!-- <section class="section">
-      </section> -->
+      <section class="section-about" id="section-about-id">
+        <div class="u-center-text">
+          <div class="profile-image">
+            <img class="circle-image" src="img/profilepic.jpg" alt="" />
+          </div>
+
+          <p class="paragraph u-margin-top-big">
+            Hello, I'm Daryll Osis, and my passion is to turn ideas into reality
+            through code. My Bachelor’s in Computer Science combined with my
+            completion of an immersive full stack program have solidified and
+            strengthened my abilities as a developer. Attending and finishing a
+            14 week full stack development bootcamp provided me with a
+            understanding of a wide variety of technologies, and in return, the
+            ability to easily find similarities in new technologies, making me
+            the kind of individuals who can easily pick up new languages and
+            learn it in short amount of time. I’m looking to obtain a
+            professional position to utilize my technical expertise and problem
+            solving skills.
+          </p>
+        </div>
+      </section>
+      <section class="section-skills" id="section-skills-id">
+        <div class="u-center-text u-margin-bottom-huge">
+          <h2 class="heading-secondary">
+            Technical Skills
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-1-of-4">
+            <div class="skill-box">
+              <!-- <i class="skill-box__icon icon-basic-world"></i> -->
+              <i class="skill-box__icon fas fa-code"></i>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Back-end
+              </h3>
+              <div class="skill-box__skills">
+                <ul>
+                  <li>JavaScript</li>
+                  <li>Java</li>
+                  <li>Node.js</li>
+                  <li>Python</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="skill-box">
+              <!-- <i class="skill-box__icon icon-basic-world"></i> -->
+              <i class="skill-box__icon fas fa-code"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Front-end
+              </h3>
+              <div class="skill-box__skills">
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS and SASS</li>
+                  <li>React</li>
+                  <li>Angular</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="skill-box">
+              <!-- <i class="skill-box__icon icon-basic-world"></i> -->
+              <i class="skill-box__icon fas fa-database"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Database
+              </h3>
+              <div class="skill-box__skills">
+                <ul>
+                  <li>MongoDB</li>
+                  <li>MySQL</li>
+                  <li>ORM</li>
+                  <li>Hibernate</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="skill-box">
+              <!-- <i class="skill-box__icon icon-basic-keyboard"></i> -->
+              <i class="skill-box__icon far fa-keyboard"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Other
+              </h3>
+              <div class="skill-box__skills">
+                <ul>
+                  <li>RESTful API</li>
+                  <li>Responsive web design</li>
+                  <li>Write clean code</li>
+                  <li>ADD ONE MORE SKILL</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- 
+    <div id="aboutdiv">
+      <div id="aboutmecontent">
+        <div class="aboutmepicture">
+          <img class="mx-auto rounded-circle" src="profilepic1.jpg" alt="">
+        </div>
+        <div class="aboutmecontainer">
+          <h2>About Me</h2>
+          <p> Hello, I'm Daryll Osis, and my passion is to turn ideas into reality through code. My Bachelor’s in Computer Science combined with my completion of an immersive full stack program have solidified and strengthened my abilities as a developer. Attending and finishing a 14 week full stack development bootcamp provided me with a understanding of a wide variety of technologies, and in return, the ability to easily find similarities in new technologies, making me the kind of individuals who can easily pick up new languages and learn it in short amount of time. I’m looking to obtain a professional position to utilize my technical expertise and problem solving skills.
+          </p>
+        </div>
+      </div>
+  
+      
+    </div> -->
 
     <!--
     <section class="grid-test">
