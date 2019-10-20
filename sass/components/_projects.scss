@@ -1,0 +1,13 @@
+.project {
+  background-color: red;
+  font-size: 1.5rem;
+  height: 40rem;
+  width: 100%;
+  text-align: center;
+
+  &__image {
+    width: 100%;
+  }
+}
+
+// --back will be opacity : 1

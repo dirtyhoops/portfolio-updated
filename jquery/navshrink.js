@@ -20,8 +20,8 @@ $(document).ready(function() {
     $('html, body').animate({ scrollTop: $path }, 850);
   });
 
-  $('#link7').click(function() {
-    $path = $('#section-skills-id').offset().top;
+  $('#link-projects').click(function() {
+    $path = $('#section-projects-id').offset().top;
     $('html, body').animate({ scrollTop: $path }, 850);
   });
 
