@@ -25,16 +25,8 @@ $(document).ready(function() {
     $('html, body').animate({ scrollTop: $path }, 850);
   });
 
-  $('#link4').click(function() {
-    $path = $('#skillsdiv').offset().top;
-    $('html, body').animate({ scrollTop: $path }, 850);
-  });
-  $('#link5').click(function() {
-    $path = $('#homediv').offset().top;
-    $('html, body').animate({ scrollTop: $path }, 850);
-  });
-  $('#link6').click(function() {
-    $path = $('#contactdiv').offset().top;
+  $('#link-contact').click(function() {
+    $path = $('#section-contactme-id').offset().top;
     $('html, body').animate({ scrollTop: $path }, 850);
   });
 });
