@@ -20,7 +20,6 @@
     &--back {
       opacity: 0;
       background-color: whitesmoke;
-      // background-color: white;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -34,7 +33,7 @@
     height: 30rem;
 
     &--1 {
-      background-image: url(https://sneakernews.com/wp-content/uploads/2017/04/adodas-yeezy-boost-350-cream-white-confirmed-app-store-list-1.jpg); // for Hyped Goods
+      background-image: url('https://sneakernews.com/wp-content/uploads/2017/04/adodas-yeezy-boost-350-cream-white-confirmed-app-store-list-1.jpg'); // for Hyped Goods
     }
 
     &--2 {
@@ -42,11 +41,11 @@
     }
 
     &--3 {
-      background-image: url(https://ecigarettereviewed.com/wp-content/uploads/2017/10/DirectVapor-Best-Online-Vape-Store.jpg); // for Vape3one
+      background-image: url('https://ecigarettereviewed.com/wp-content/uploads/2017/10/DirectVapor-Best-Online-Vape-Store.jpg'); // for Vape3one
     }
 
     &--4 {
-      background-image: url(https://milehighsports.com/wp-content/uploads/2018/10/EE42733B-1466-4C2C-BD73-8FBDAE62EDFA.jpeg); // for Hoop Finder
+      background-image: url('https://milehighsports.com/wp-content/uploads/2018/10/EE42733B-1466-4C2C-BD73-8FBDAE62EDFA.jpeg'); // for Hoop Finder
     }
   }
 
@@ -55,11 +54,13 @@
     &--main {
       font-size: 2.1rem;
       margin-top: 7rem;
+      margin-bottom: -0.3rem;
     }
 
     &--sub {
       font-size: 1.6rem;
       margin-bottom: 5rem;
+      color: $color-red-light;
     }
   }
 
@@ -97,6 +98,24 @@
 
     .project__button {
       animation: moveInBottomLong 0.4s ease-in-out;
+    }
+  }
+
+  &__animation {
+    &--1 {
+      animation: moveInBottomProjectCards 0.6s ease-out;
+    }
+
+    &--2 {
+      animation: moveInBottomProjectCards 0.78s ease-out;
+    }
+
+    &--3 {
+      animation: moveInBottomProjectCards 0.96s ease-out;
+    }
+
+    &--4 {
+      animation: moveInBottomProjectCards 1.14s ease-out;
     }
   }
 }

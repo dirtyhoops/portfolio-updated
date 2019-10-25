@@ -91,3 +91,17 @@
     }
   }
 }
+
+.contactme__social {
+  margin-top: 5rem;
+
+  &__container {
+    background-color: rgb(202, 202, 189);
+    height: 5rem;
+
+    i {
+      font-size: 3rem;
+      color: $color-black;
+    }
+  }
+}
