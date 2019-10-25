@@ -1,13 +1,102 @@
 .project {
-  background-color: red;
-  font-size: 1.5rem;
-  height: 40rem;
-  width: 100%;
-  text-align: center;
+  height: 30rem;
+  position: relative;
+  color: $color-black;
 
-  &__image {
+  &__side {
+    font-size: 2rem;
+    height: 30rem;
     width: 100%;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      opacity: 0;
+      background-color: whitesmoke;
+      // background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 30rem;
+
+    &--1 {
+      background-image: url(https://sneakernews.com/wp-content/uploads/2017/04/adodas-yeezy-boost-350-cream-white-confirmed-app-store-list-1.jpg); // for Hyped Goods
+    }
+
+    &--2 {
+      background-image: url(../img/moviedb.png); // for The Movie DB
+    }
+
+    &--3 {
+      background-image: url(https://ecigarettereviewed.com/wp-content/uploads/2017/10/DirectVapor-Best-Online-Vape-Store.jpg); // for Vape3one
+    }
+
+    &--4 {
+      background-image: url(https://milehighsports.com/wp-content/uploads/2018/10/EE42733B-1466-4C2C-BD73-8FBDAE62EDFA.jpeg); // for Hoop Finder
+    }
+  }
+
+  &__header {
+    animation: moveInBottomLong1 0.4s ease-in-out; // This animates the header to move up giving an illusion for hovering out
+    &--main {
+      font-size: 2.1rem;
+      margin-top: 7rem;
+    }
+
+    &--sub {
+      font-size: 1.6rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__button {
+    animation: moveInTopLong1 0.4s ease-in-out; // This animates the button to move down giving an illusion for hovering out
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      color: $color-red-light;
+      text-decoration: none;
+      padding: 0.7rem 3rem;
+      display: inline-block;
+      transition: all 0.5s;
+      font-size: 1.6rem;
+      border: 2px solid $color-red-light;
+    }
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-red-light;
+    }
+  }
+
+  // When a mouse hovers the whole card
+  &:hover &__side--front {
+    opacity: 0;
+  }
+
+  &:hover &__side--back {
+    opacity: 1;
+
+    .project__header {
+      animation: moveInTopLong 0.4s ease-in-out;
+    }
+
+    .project__button {
+      animation: moveInBottomLong 0.4s ease-in-out;
+    }
   }
 }
-
-// --back will be opacity : 1

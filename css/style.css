@@ -26,6 +26,36 @@
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes moveInBottomLong {
+  0% {
+    opacity: 0;
+    transform: translateY(8rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInTopLong {
+  0% {
+    opacity: 0;
+    transform: translateY(-8rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottomLong1 {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translateY(-10rem); } }
+
+@keyframes moveInTopLong1 {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translateY(10rem); } }
+
 *,
 *::after,
 *::before {
@@ -69,6 +99,10 @@ body {
 
 .heading-secondary {
   font-size: 3.5rem; }
+
+.heading-secondary-white {
+  font-size: 3.5rem;
+  color: white; }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -226,13 +260,69 @@ body {
         transition: all 0.4s; }
 
 .project {
-  background-color: red;
-  font-size: 1.5rem;
-  height: 40rem;
-  width: 100%;
-  text-align: center; }
-  .project__image {
-    width: 100%; }
+  height: 30rem;
+  position: relative;
+  color: #000; }
+  .project__side {
+    font-size: 2rem;
+    height: 30rem;
+    width: 100%;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+    .project__side--front {
+      background-color: #fff; }
+    .project__side--back {
+      opacity: 0;
+      background-color: whitesmoke;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+  .project__picture {
+    background-size: cover;
+    height: 30rem; }
+    .project__picture--1 {
+      background-image: url(https://sneakernews.com/wp-content/uploads/2017/04/adodas-yeezy-boost-350-cream-white-confirmed-app-store-list-1.jpg); }
+    .project__picture--2 {
+      background-image: url(../img/moviedb.png); }
+    .project__picture--3 {
+      background-image: url(https://ecigarettereviewed.com/wp-content/uploads/2017/10/DirectVapor-Best-Online-Vape-Store.jpg); }
+    .project__picture--4 {
+      background-image: url(https://milehighsports.com/wp-content/uploads/2018/10/EE42733B-1466-4C2C-BD73-8FBDAE62EDFA.jpeg); }
+  .project__header {
+    animation: moveInBottomLong1 0.4s ease-in-out; }
+    .project__header--main {
+      font-size: 2.1rem;
+      margin-top: 7rem; }
+    .project__header--sub {
+      font-size: 1.6rem;
+      margin-bottom: 5rem; }
+  .project__button {
+    animation: moveInTopLong1 0.4s ease-in-out; }
+    .project__button:link, .project__button:visited {
+      text-transform: uppercase;
+      color: #f15353;
+      text-decoration: none;
+      padding: 0.7rem 3rem;
+      display: inline-block;
+      transition: all 0.5s;
+      font-size: 1.6rem;
+      border: 2px solid #f15353; }
+    .project__button:hover {
+      color: #fff;
+      background-color: #f15353; }
+  .project:hover .project__side--front {
+    opacity: 0; }
+  .project:hover .project__side--back {
+    opacity: 1; }
+    .project:hover .project__side--back .project__header {
+      animation: moveInTopLong 0.4s ease-in-out; }
+    .project:hover .project__side--back .project__button {
+      animation: moveInBottomLong 0.4s ease-in-out; }
 
 .skill-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -266,7 +356,7 @@ body {
   max-width: 114rem;
   margin: 0 auto; }
   .row:not(:last-child) {
-    margin-bottom: 1rem; }
+    margin-bottom: 0rem; }
   .row::after {
     content: '';
     display: table;
@@ -274,19 +364,19 @@ body {
   .row [class^='col-'] {
     float: left; }
     .row [class^='col-']:not(:last-child) {
-      margin-right: 1rem; }
+      margin-right: 0rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 1rem) / 2); }
+    width: calc((100% - 0rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 1rem) / 3); }
+    width: calc((100% - 2 * 0rem) / 3); }
   .row .col-2-of-3 {
-    width: calc( 2 * ((100% - 2 * 1rem) / 3) + 1rem); }
+    width: calc( 2 * ((100% - 2 * 0rem) / 3) + 0rem); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 1rem) / 4); }
+    width: calc((100% - 3 * 0rem) / 4); }
   .row .col-2-of-4 {
-    width: calc( 2 * ((100% - 3 * 1rem) / 4) + 1rem); }
+    width: calc( 2 * ((100% - 3 * 0rem) / 4) + 0rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * ((100% - 3 * 1rem) / 4) + (2 * 1rem)); }
+    width: calc( 3 * ((100% - 3 * 0rem) / 4) + (2 * 0rem)); }
 
 .header {
   height: 115vh;

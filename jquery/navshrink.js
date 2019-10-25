@@ -25,6 +25,12 @@ $(document).ready(function() {
     $('html, body').animate({ scrollTop: $path }, 850);
   });
 
+  // For the button in the header
+  $('#link-projects-2').click(function() {
+    $path = $('#section-projects-id').offset().top;
+    $('html, body').animate({ scrollTop: $path }, 850);
+  });
+
   $('#link-contact').click(function() {
     $path = $('#section-contactme-id').offset().top;
     $('html, body').animate({ scrollTop: $path }, 850);
