@@ -4,7 +4,6 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: $color-grey-dark;
-  // padding: 2rem;
 }
 
 .heading-primary {
@@ -15,7 +14,7 @@ body {
 
   &--main {
     display: block;
-    font-size: 4rem;
+    font-size: 4.4rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
     animation-name: moveInLeft;
@@ -29,7 +28,7 @@ body {
 
   &--sub {
     display: block;
-    font-size: 3rem;
+    font-size: 3.4rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
     animation: moveInRight 1s ease-out;

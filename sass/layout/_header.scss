@@ -14,11 +14,20 @@
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
 
+  @include respond(tab-portrait) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 94%);
+    clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 94%);
+  }
+
   &__text-box {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
+    @include respond(tab-portrait) {
+      width: 90%;
+    }
   }
 }

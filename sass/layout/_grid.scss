@@ -6,6 +6,11 @@
     margin-bottom: $gutter-vertical;
   }
 
+  @include respond(tab-portrait) {
+    max-width: 90%;
+    padding: 0 1em;
+  }
+
   @include clearfix;
 
   [class^='col-'] {
@@ -13,6 +18,19 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-portrait) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-portrait) {
+      width: 50% !important;
+    }
+
+    @include respond(phone) {
+      width: 100% !important;
     }
   }
 

@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600-900px:      Table portrait
+900-1200px:     Table landscape
+1200-1800px:    Is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-portrait
+- tab-lanscape
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -81,6 +98,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -99,7 +125,7 @@ body {
   margin-bottom: 2rem; }
   .heading-primary--main {
     display: block;
-    font-size: 4rem;
+    font-size: 4.4rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
     animation-name: moveInLeft;
@@ -109,7 +135,7 @@ body {
       color: #f15353; }
   .heading-primary--sub {
     display: block;
-    font-size: 3rem;
+    font-size: 3.4rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
     animation: moveInRight 1s ease-out; }
@@ -390,6 +416,9 @@ body {
   height: 30rem;
   position: relative;
   color: #000; }
+  @media (max-width: 37.5em) {
+    .project {
+      height: 40rem; } }
   .project__side {
     font-size: 2rem;
     height: 30rem;
@@ -399,6 +428,9 @@ body {
     top: 0;
     left: 0;
     overflow: hidden; }
+    @media (max-width: 37.5em) {
+      .project__side {
+        height: 40rem; } }
     .project__side--front {
       background-color: #fff; }
     .project__side--back {
@@ -412,6 +444,9 @@ body {
   .project__picture {
     background-size: cover;
     height: 30rem; }
+    @media (max-width: 37.5em) {
+      .project__picture {
+        height: 40rem; } }
     .project__picture--1 {
       background-image: url("https://sneakernews.com/wp-content/uploads/2017/04/adodas-yeezy-boost-350-cream-white-confirmed-app-store-list-1.jpg"); }
     .project__picture--2 {
@@ -426,6 +461,9 @@ body {
       font-size: 2.1rem;
       margin-top: 7rem;
       margin-bottom: -0.3rem; }
+      @media (max-width: 37.5em) {
+        .project__header--main {
+          margin-top: 13rem; } }
     .project__header--sub {
       font-size: 1.6rem;
       margin-bottom: 5rem;
@@ -462,13 +500,22 @@ body {
     animation: moveInBottomProjectCards 1.14s ease-out; }
 
 .skill-box {
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
-  font-size: 1.5rem;
   padding: 1.5rem;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s; }
+  @media (max-width: 56.25em) {
+    .skill-box {
+      width: 90%;
+      padding: 3rem;
+      margin: 0 auto; } }
+  @media (max-width: 37.5em) {
+    .skill-box {
+      width: 70%;
+      padding: 5rem; } }
   .skill-box__icon {
     font-size: 6rem;
     margin: 2rem;
@@ -484,7 +531,7 @@ body {
       margin: 0 auto; }
       .skill-box__skills ul li {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         padding: 1rem; }
         .skill-box__skills ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
@@ -494,6 +541,10 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 0rem; }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 90%;
+      padding: 0 1em; } }
   .row::after {
     content: '';
     display: table;
@@ -502,6 +553,16 @@ body {
     float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 0rem; }
+      @media (max-width: 56.25em) {
+        .row [class^='col-']:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 3rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^='col-'] {
+        width: 50% !important; } }
+    @media (max-width: 37.5em) {
+      .row [class^='col-'] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 0rem) / 2); }
   .row .col-1-of-3 {
@@ -523,12 +584,19 @@ body {
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%); }
+  @media (max-width: 56.25em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 94%);
+      clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 94%); } }
   .header__text-box {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+    @media (max-width: 56.25em) {
+      .header__text-box {
+        width: 90%; } }
 
 nav.black {
   background: #000; }
@@ -589,8 +657,11 @@ nav.black {
 .section-about {
   height: 100vh;
   background-color: whitesmoke;
-  padding: 25rem 20rem;
+  padding: 30rem 20rem;
   margin-top: -16vh; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 40rem 10rem; } }
 
 .section-skills {
   height: 90vh;
@@ -601,11 +672,22 @@ nav.black {
   transform: skewY(-5deg); }
   .section-skills > * {
     transform: skewY(5deg); }
+  @media (max-width: 56.25em) {
+    .section-skills {
+      padding: 15rem 0;
+      height: 97vh; } }
+  @media (max-width: 37.5em) {
+    .section-skills {
+      padding: 15rem 0;
+      height: 100%; } }
 
 .section-projects {
   background-color: whitesmoke;
-  padding: 20rem 20rem 45rem;
+  padding: 20rem 20rem 45rem 20rem;
   margin-top: -8vh; }
+  @media (max-width: 56.25em) {
+    .section-projects {
+      padding: 20rem 1rem 45rem 1rem; } }
   .section-projects__animation--header {
     animation: moveInRight 1s ease; }
 
