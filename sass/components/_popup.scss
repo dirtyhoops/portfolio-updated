@@ -1,0 +1,96 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, 0.8);
+  transition: all 0.3s;
+
+  // To hide the pop up first
+  opacity: 0;
+  visibility: hidden;
+
+  &__content {
+    @include absCenter;
+    width: 40%;
+    height: 67rem;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all 0.3s 0.1s; // 0.2s is the delay before the animation
+  }
+
+  &__top {
+    width: 100%;
+    height: 40rem;
+    background-color: rgb(39, 39, 9);
+  }
+
+  &__bottom {
+    width: 100%;
+    height: 27rem;
+    padding: 2rem 5rem 2rem 2rem;
+
+    &__header {
+      width: 100%;
+      &__descriptioncontainer {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid $color-grey;
+      }
+    }
+
+    &__buttons {
+      width: 100%;
+      position: absolute;
+      padding: 1rem 2rem 2rem 2rem;
+      bottom: 0;
+      left: 0;
+
+      &--view {
+        height: 4rem;
+        padding-top: 0.8rem;
+        vertical-align: top;
+        width: 70%;
+        display: inline-block;
+      }
+
+      &--close {
+        height: 4rem;
+        width: 29%;
+        display: inline-block;
+        text-align: right;
+
+        .popup__close {
+          &:link,
+          &:visited {
+            color: $color-grey-dark;
+            padding-left: 3rem;
+            font-size: 4rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            line-height: 1;
+          }
+
+          &:hover {
+            color: $color-red-light;
+          }
+        }
+      }
+    }
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

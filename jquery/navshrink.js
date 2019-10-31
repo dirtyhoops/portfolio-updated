@@ -12,27 +12,27 @@ $(document).ready(function() {
     $('html, body').animate({ scrollTop: $path }, 850);
   });
   $('#link-about').click(function() {
-    $path = $('#section-about-id').offset().top;
+    $path = $('#section-about').offset().top;
     $('html, body').animate({ scrollTop: $path }, 850);
   });
   $('#link-skills').click(function() {
-    $path = $('#section-skills-id').offset().top;
+    $path = $('#section-skills').offset().top;
     $('html, body').animate({ scrollTop: $path }, 850);
   });
 
   $('#link-projects').click(function() {
-    $path = $('#section-projects-id').offset().top;
+    $path = $('#section-projects').offset().top;
     $('html, body').animate({ scrollTop: $path }, 850);
   });
 
   // For the button in the header
   $('#link-projects-2').click(function() {
-    $path = $('#section-projects-id').offset().top;
+    $path = $('#section-projects').offset().top;
     $('html, body').animate({ scrollTop: $path }, 850);
   });
 
   $('#link-contact').click(function() {
-    $path = $('#section-contactme-id').offset().top;
+    $path = $('#section-contactme').offset().top;
     $('html, body').animate({ scrollTop: $path }, 850);
   });
 });

@@ -53,3 +53,22 @@
     animation-fill-mode: backwards;
   }
 }
+
+.popup__button {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    background-color: $color-red-light;
+    color: $color-white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    transition: all 0.3s;
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    color: $color-red-light;
+    background-color: $color-white;
+    border: 2px solid $color-red-light;
+  }
+}

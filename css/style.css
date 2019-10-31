@@ -129,6 +129,19 @@ body {
 .paragraph {
   font-size: 1.6rem; }
 
+.popup__heading {
+  color: #000;
+  font-size: 2.6rem;
+  line-height: 1.2; }
+
+.popup__subheading {
+  color: #c0b1b1;
+  font-size: 1.5rem; }
+
+.popup__description {
+  color: #000;
+  font-size: 1.4rem; }
+
 .u-center-text {
   text-align: center; }
 
@@ -202,6 +215,20 @@ body {
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+.popup__button:link, .popup__button:visited {
+  text-transform: uppercase;
+  background-color: #f15353;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  transition: all 0.3s;
+  font-size: 1.5rem; }
+
+.popup__button:hover {
+  color: #f15353;
+  background-color: #fff;
+  border: 2px solid #f15353; }
 
 .contactme {
   width: 80%;
@@ -283,6 +310,77 @@ body {
     .contactme__social__container i {
       font-size: 3rem;
       color: #000; }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden; }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 67rem;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all 0.3s 0.1s; }
+  .popup__top {
+    width: 100%;
+    height: 40rem;
+    background-color: #272709; }
+  .popup__bottom {
+    width: 100%;
+    height: 27rem;
+    padding: 2rem 5rem 2rem 2rem; }
+    .popup__bottom__header {
+      width: 100%; }
+      .popup__bottom__header__descriptioncontainer {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #c0b1b1; }
+    .popup__bottom__buttons {
+      width: 100%;
+      position: absolute;
+      padding: 1rem 2rem 2rem 2rem;
+      bottom: 0;
+      left: 0; }
+      .popup__bottom__buttons--view {
+        height: 4rem;
+        padding-top: 0.8rem;
+        vertical-align: top;
+        width: 70%;
+        display: inline-block; }
+      .popup__bottom__buttons--close {
+        height: 4rem;
+        width: 29%;
+        display: inline-block;
+        text-align: right; }
+        .popup__bottom__buttons--close .popup__close:link, .popup__bottom__buttons--close .popup__close:visited {
+          color: #777;
+          padding-left: 3rem;
+          font-size: 4rem;
+          text-decoration: none;
+          transition: all 0.2s;
+          line-height: 1; }
+        .popup__bottom__buttons--close .popup__close:hover {
+          color: #f15353; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
 
 .project {
   height: 30rem;
