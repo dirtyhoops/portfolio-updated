@@ -1,7 +1,7 @@
 .section-about {
   height: 100vh;
   background-color: whitesmoke;
-  padding: 40rem 20rem;
+  padding: 25rem 20rem;
   margin-top: -16vh;
 }
 
@@ -28,6 +28,10 @@
   background-color: whitesmoke;
   padding: 20rem 20rem 45rem;
   margin-top: -8vh;
+
+  &__animation--header {
+    animation: moveInRight 1s ease;
+  }
 }
 
 .section-contactme {

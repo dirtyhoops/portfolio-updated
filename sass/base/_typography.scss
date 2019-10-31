@@ -10,11 +10,12 @@ body {
 .heading-primary {
   color: $color-white;
   backface-visibility: hidden;
-  margin-bottom: 6rem;
+  line-height: 1.3;
+  margin-bottom: 2rem;
 
   &--main {
     display: block;
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
     animation-name: moveInLeft;
@@ -22,13 +23,13 @@ body {
     animation-timing-function: ease-out;
 
     &-span {
-      color: $color-orange;
+      color: $color-red-light;
     }
   }
 
   &--sub {
     display: block;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
     animation: moveInRight 1s ease-out;
@@ -36,11 +37,11 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .heading-secondary-white {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: white;
 }
 
@@ -59,17 +60,17 @@ body {
 .popup {
   &__heading {
     color: $color-black;
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     line-height: 1.2;
   }
 
   &__subheading {
     color: $color-grey;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   &__description {
     color: $color-black;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
   }
 }
